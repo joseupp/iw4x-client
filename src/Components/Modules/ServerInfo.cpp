@@ -89,7 +89,7 @@ namespace Components
 		auto addressText = Network::Address(*Game::connectedHost).getString();
 		if (addressText == "0.0.0.0:0"s || addressText == "loopback"s)
 		{
-			addressText = "Listen Server"s;
+			addressText = "  ";
 		}
 
 		// Get x positions

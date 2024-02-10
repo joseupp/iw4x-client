@@ -300,6 +300,12 @@ namespace Components
 
 	QuickPatch::QuickPatch()
 	{
+		// iw4s Custom dvars
+		Game::Dvar_RegisterInt("scr_killstreakHud", 1, 0, 2, Game::DVAR_ARCHIVE, "Killstreak HUD");
+		Game::Dvar_RegisterInt("scr_Agility", 0, 0, 1, Game::DVAR_ARCHIVE, "Player faster movement");
+		Game::Dvar_RegisterInt("scr_4k_hud_scale", 0, 0, 2, Game::DVAR_ARCHIVE, "Scale HUD for high resolution displays");
+		Game::Dvar_RegisterInt("scr_restxp_enable", 0, 0, 1, Game::DVAR_ARCHIVE, "Double XP");
+
 		// Filtering any mapents that is intended for Spec:Ops gamemode (CODO) and prevent them from spawning
 		Utils::Hook(0x5FBD6E, QuickPatch::IsDynClassname_Stub, HOOK_CALL).install()->quick();
 
@@ -344,19 +350,19 @@ namespace Components
 		Utils::Hook::Set<const char*>(0x5076A0, "IW4x: Multiplayer");
 
 		// sv_hostname
-		Utils::Hook::Set<const char*>(0x4D378B, "IW4Host");
+		Utils::Hook::Set<const char*>(0x4D378B, "  ");
 
 		// console logo
-		Utils::Hook::Set<const char*>(0x428A66, BASEGAME "/images/logo.bmp");
+		Utils::Hook::Set<const char*>(0x428A66, BASEGAME2 "/images/logo.bmp");
 
 		// splash logo
-		Utils::Hook::Set<const char*>(0x475F9E, BASEGAME "/images/splash.bmp");
+		Utils::Hook::Set<const char*>(0x475F9E, BASEGAME2 "/images/splash.bmp");
 
 		Utils::Hook::Set<const char*>(0x4876C6, "Successfully read stats data\n");
 
 		// Numerical ping (cg_scoreboardPingText 1)
-		Utils::Hook::Set<BYTE>(0x45888E, 1);
-		Utils::Hook::Set<BYTE>(0x45888C, Game::DVAR_CHEAT);
+		//Utils::Hook::Set<BYTE>(0x45888E, 1);
+		//Utils::Hook::Set<BYTE>(0x45888C, Game::DVAR_CHEAT);
 
 		// increase font sizes for chat on higher resolutions
 		static float float13 = 13.0f;

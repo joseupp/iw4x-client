@@ -142,9 +142,10 @@ using namespace std::literals;
 
 #endif
 
-#define BASEGAME "iw4x"
+#define BASEGAME "iw4s"
+#define BASEGAME2 "4sdata"
 #define BASEGAME_NAME "iw4mp_ceg.exe"
-#define CLIENT_CONFIG "iw4x_config.cfg"
+#define CLIENT_CONFIG "iw4s_config.cfg"
 
 #define XFILE_MAGIC_UNSIGNED 0x3030317566665749
 #define XFILE_VERSION 276

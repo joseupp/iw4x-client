@@ -158,17 +158,24 @@ namespace Components
 	Gamepad::ControllerMenuKeyMapping Gamepad::controllerMenuKeyMappings[]
 	{
 		{Game::K_BUTTON_A, Game::K_ENTER},
-		{Game::K_BUTTON_START, Game::K_ENTER},
 		{Game::K_BUTTON_B, Game::K_ESCAPE},
-		{Game::K_BUTTON_BACK, Game::K_ESCAPE},
+		{Game::K_BUTTON_Y, Game::K_F1},
+		{Game::K_BUTTON_X, Game::K_F2},
+		{Game::K_BUTTON_START, Game::K_BUTTON_START},
 		{Game::K_DPAD_UP, Game::K_UPARROW},
 		{Game::K_APAD_UP, Game::K_UPARROW},
 		{Game::K_DPAD_DOWN, Game::K_DOWNARROW},
 		{Game::K_APAD_DOWN, Game::K_DOWNARROW},
-		{Game::K_DPAD_LEFT, Game::K_LEFTARROW},
-		{Game::K_APAD_LEFT, Game::K_LEFTARROW},
-		{Game::K_DPAD_RIGHT, Game::K_RIGHTARROW},
-		{Game::K_APAD_RIGHT, Game::K_RIGHTARROW},
+		{Game::K_DPAD_LEFT, Game::K_DPAD_LEFT},
+		{Game::K_APAD_LEFT, Game::K_APAD_LEFT},
+		{Game::K_DPAD_RIGHT, Game::K_DPAD_RIGHT},
+		{Game::K_APAD_RIGHT, Game::K_APAD_RIGHT},
+		{Game::K_BUTTON_LSHLDR, Game::K_LEFTARROW},
+		{Game::K_BUTTON_RSHLDR, Game::K_RIGHTARROW},
+		{Game::K_BUTTON_LTRIG, Game::K_KP_LEFTARROW},
+		{Game::K_BUTTON_RTRIG, Game::K_KP_5},
+		{Game::K_BUTTON_LSTICK, Game::K_LEFTARROW},
+		{Game::K_BUTTON_RSTICK, Game::K_RIGHTARROW},
 	};
 
 	Gamepad::GamePad Gamepad::gamePads[Game::MAX_GPAD_COUNT]{};

@@ -137,7 +137,7 @@ namespace Components
 		// TODO: Allow playerdata changes in setPlayerData UI script.
 
 		// Rename stat file
-		Utils::Hook::SetString(0x71C048, "iw4x.stat");
+		Utils::Hook::SetString(0x71C048, "iw4s.stat");
 
 		// Patch stats steamid
 		Utils::Hook::Nop(0x682EBF, 20);

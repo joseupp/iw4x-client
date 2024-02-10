@@ -258,7 +258,9 @@ namespace Components
 			RegisterFolder("zonedata");
 		}
 
-		RegisterFolder("userraw");
+		RegisterFolder("4sdata");
+
+		//RegisterFolder("userraw");
 	}
 
 	__declspec(naked) void FileSystem::StartupStub()

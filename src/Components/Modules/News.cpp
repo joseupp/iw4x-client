@@ -61,7 +61,7 @@ namespace Components
 		Localization::Set("MPUI_MOTD_TEXT", NEWS_MOTD_DEFAULT);
 
 		// make newsfeed (ticker) menu items not cut off based on safe area
-		Utils::Hook::Nop(0x63892D, 5);
+		//Utils::Hook::Nop(0x63892D, 5);
 
 		// hook for getting the news ticker string
 		Utils::Hook::Nop(0x6388BB, 2); // skip the "if (item->text[0] == '@')" localize check

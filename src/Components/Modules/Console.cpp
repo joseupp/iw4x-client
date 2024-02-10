@@ -864,7 +864,7 @@ namespace Components
 #ifdef EXPERIMENTAL_BUILD
 		Utils::Hook::Set<const char*>(0x5A44B4, "IW4x MP: " REVISION_STR "-develop> ");
 #else
-		Utils::Hook::Set<const char*>(0x5A44B4, "IW4x MP: " REVISION_STR "> ");
+		Utils::Hook::Set<const char*>(0x5A44B4, "IW4x MP: " REVISION_STR".4s" "> ");
 #endif
 
 		// Patch console color

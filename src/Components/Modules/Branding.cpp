@@ -101,7 +101,7 @@ namespace Components
 		RegisterBrandingDvars();
 
 		// UI version string
-		Utils::Hook::Set<const char*>(0x43F73B, "IW4x " REVISION_STR);
+		Utils::Hook::Set<const char*>(0x43F73B, "IW4x " REVISION_STR ".4s");
 
 		// Short version dvar
 		Utils::Hook::Set<const char*>(0x60BD91, REVISION_STR);
@@ -125,7 +125,7 @@ namespace Components
 		Utils::Hook::Set<float*>(0x43F710, buildLocColor);
 
 		// Place ui version string to bottom right corner (ui_buildlocation)
-		Utils::Hook(0x6310A0, Dvar_RegisterUIBuildLocation, HOOK_CALL).install()->quick(); // Dvar_RegisterVec2
+		//Utils::Hook(0x6310A0, Dvar_RegisterUIBuildLocation, HOOK_CALL).install()->quick(); // Dvar_RegisterVec2
 
 		Utils::Hook(0x60BD81, Dvar_SetVersionString, HOOK_CALL).install()->quick();
 

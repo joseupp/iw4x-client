@@ -864,7 +864,7 @@ namespace Components
 				Utils::Hook::Call<void()>(0x401700)();
 
 				// Reopen main menu
-				Game::Menus_OpenByName(Game::uiContext, "main_text");
+				Game::Menus_OpenByName(Game::uiContext, "menu_xboxlive");
 			}
 		});
 
@@ -885,6 +885,12 @@ namespace Components
 		Add("ui_mp/stats_reset.menu");
 		Add("ui_mp/stats_unlock.menu");
 		Add("ui_mp/theater_menu.menu");
+		Add("ui_mp/settings_map1.menu");
+		Add("ui_mp/settings_bonus_map1.menu");
+		Add("ui_mp/settings_bonus_map2.menu");
+		Add("ui_mp/settings_bonus_map3.menu");
+		Add("ui_mp/settings_bonus_map4.menu");
+		Add("ui_mp/settings_bonus_map5.menu");
 	}
 
 	void Menus::preDestroy()
