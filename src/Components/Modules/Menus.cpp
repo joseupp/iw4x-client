@@ -826,7 +826,7 @@ namespace Components
 		Utils::Hook::Nop(0x453406, 5);
 
 		// make Com_Error and similar go back to main_text instead of menu_xboxlive.
-		Utils::Hook::SetString(0x6FC790, "main_text");
+		//Utils::Hook::SetString(0x6FC790, "main_text");
 
 		Command::Add("openmenu", [](const Command::Params* params)
 		{
