@@ -199,7 +199,7 @@ namespace Components
 		}
 
 		PartyEnable = Dvar::Register<bool>("party_enable", Dedicated::IsEnabled(), Game::DVAR_NONE, "Enable party system");
-		Dvar::Register<bool>("xblive_privatematch", true, Game::DVAR_INIT, "");
+		//Dvar::Register<bool>("xblive_privatematch", true, Game::DVAR_INIT, "");
 
 		// various changes to SV_DirectConnect-y stuff to allow non-party joinees
 		Utils::Hook::Set<WORD>(0x460D96, 0x90E9);
@@ -257,23 +257,23 @@ namespace Components
 
 		// Force xblive_privatematch 0 and rename it
 		//Utils::Hook::Set<BYTE>(0x420A6A, 4);
-		Utils::Hook::Set<BYTE>(0x420A6C, 0);
-		Utils::Hook::Set<const char*>(0x420A6E, "xblive_privateserver");
+		//Utils::Hook::Set<BYTE>(0x420A6C, 0);
+		//Utils::Hook::Set<const char*>(0x420A6E, "xblive_privateserver");
 
 		// Remove migration shutdown, it causes crashes and will be destroyed when erroring anyways
 		Utils::Hook::Nop(0x5A8E1C, 12);
 		Utils::Hook::Nop(0x5A8E33, 11);
 
 		// Enable XP Bar
-		Utils::Hook(0x62A2A7, UIDvarIntStub, HOOK_CALL).install()->quick();
+		//Utils::Hook(0x62A2A7, UIDvarIntStub, HOOK_CALL).install()->quick();
 
 		// Set NAT to open
 		Utils::Hook::Set<int>(0x79D898, 1);
 
 		// Disable host migration
-		Utils::Hook::Set<BYTE>(0x5B58B2, 0xEB);
-		Utils::Hook::Set<BYTE>(0x4D6171, 0);
-		Utils::Hook::Nop(0x4077A1, 5); // PartyMigrate_Frame
+		//Utils::Hook::Set<BYTE>(0x5B58B2, 0xEB);
+		//Utils::Hook::Set<BYTE>(0x4D6171, 0);
+		//Utils::Hook::Nop(0x4077A1, 5); // PartyMigrate_Frame
 
 		// Patch playlist stuff for non-party behavior
 		static Game::dvar_t* partyEnable = PartyEnable.get<Game::dvar_t*>();
